@@ -76,6 +76,42 @@ public class Game {
     }
 
     public Move choosePokemonMove(Player player, Pokemon pokemon){
-        
+        System.out.println(player.getName() + ", choose the move for " + pokemon.getName() + ":");
+        displayPokemonMoves(pokemon.getMoves());
+        int choice = menu.getValidIntegerChoice(pokemon.getMoves().size());
+        return pokemon.getMoves().get(choice - 1);
+    }
+    private void displayPokemonMoves(ArrayList<Move> moves) {
+        for (int i = 0; i < moves.size(); i++) {
+            System.out.println((i + 1) + ". " + moves.get(i));
+        }
+    }
+
+    public void startBattle(){
+        System.out.println("###### BATTLE STARTS #######");
+        Pokemon player1Pokemon = sendPokemon(player1);
+        Pokemon player2Pokemon = sendPokemon(player2);
+
+
+    }
+
+    public void simulateFight(Pokemon player1Pokemon, Pokemon player2Pokemon){
+        System.out.printf("###### %s VS. %s #######\n", player1Pokemon.getName(), player2Pokemon.getName());
+        Pokemon fasterPokemon;
+            Pokemon slowerPokemon;
+            if (player1Pokemon.getSpeed() >= player2Pokemon.getSpeed()){
+                fasterPokemon = player1Pokemon;
+                slowerPokemon = player2Pokemon;
+            }
+            else {
+                fasterPokemon = player2Pokemon;
+                slowerPokemon = player1Pokemon;
+            }
+        while (!player1Pokemon.isFainted() && !player2Pokemon.isFainted()){
+            System.out.printf("%s is faster than %s! So it attacks first!\n", fasterPokemon.getName(), slowerPokemon.getName());
+            
+
+            
+        }
     }
 }
