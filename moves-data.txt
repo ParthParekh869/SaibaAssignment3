@@ -1,0 +1,28 @@
+MoveName, MoveType, Category(Physical/Special), Power, Accuracy
+Scratch, Normal, Physical, 40, 95
+Ember, Fire, Special, 40, 85
+Flamethrower, Fire, Special, 90, 75
+Tackle, Normal, Physical, 40, 90
+Water Gun, Water, Special, 40, 80
+Hydro Pump, Water, Special, 110, 65
+Vine Whip, Grass, Physical, 45, 85
+Razor Leaf, Grass, Physical, 55, 80
+Thunder Shock, Electric, Special, 40, 75
+Quick Attack, Normal, Physical, 40, 95
+Thunderbolt, Electric, Special, 90, 70
+Pound, Normal, Physical, 40, 90
+Sing, Normal, Status, 0, 45
+Body Slam, Normal, Physical, 85, 85
+Defense Curl, Normal, Status, 0, 100
+Shadow Ball, Ghost, Special, 80, 70
+Hypnosis, Psychic, Status, 0, 50
+Dream Eater, Psychic, Special, 100, 70
+Lick, Ghost, Physical, 30, 85
+Karate Chop, Fighting, Physical, 50, 80
+Low Kick, Fighting, Physical, 0, 85
+Seismic Toss, Fighting, Physical, 0, 90
+Bite, Dark, Physical, 60, 75
+Sand Attack, Ground, Status, 0, 100
+Rock Throw, Rock, Physical, 50, 70
+Harden, Normal, Status, 0, 100
+Bind, Normal, Physical, 15, 75

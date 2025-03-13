@@ -1,0 +1,10 @@
+Name, Type1, Type2 (optional), Level, HP, Attack, Defense, Speed, Move1, Move2, Move3, Move4
+Charmander, Fire, , 10, 39, 52, 43, 65, Scratch, Ember, Flamethrower, Tackle
+Squirtle, Water, , 10, 44, 48, 65, 43, Tackle, Water Gun, Hydro Pump, Scratch
+Bulbasaur, Grass, Poison, 10, 45, 49, 49, 45, Vine Whip, Tackle, Razor Leaf, Scratch
+Pikachu, Electric, , 12, 35, 55, 40, 90, Thunder Shock, Quick Attack, Thunderbolt, Tackle
+Jigglypuff, Normal, Fairy, 8, 115, 45, 20, 20, Pound, Sing, Body Slam, Defense Curl
+Gengar, Ghost, Poison, 15, 60, 65, 60, 110, Shadow Ball, Hypnosis, Dream Eater, Lick
+Machop, Fighting, , 10, 70, 80, 50, 35, Karate Chop, Low Kick, Seismic Toss, Tackle
+Eevee, Normal, , 10, 55, 55, 50, 55, Tackle, Quick Attack, Bite, Sand Attack
+Onix, Rock, Ground, 12, 35, 45, 160, 70, Rock Throw, Tackle, Harden, Bind
