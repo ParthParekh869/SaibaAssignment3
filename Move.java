@@ -96,9 +96,10 @@ public class Move {
     }
 
     public static void displayMoveStats(){
+        System.out.println("Types:");
         for (int i = 0; i < moveList.size(); i++) {
             Move move = moveList.get(i);
-            System.out.println(move);
+            System.out.println((i+1) +". "+ move);
             System.out.println(move.getPokemonsToString());
         }
     }
