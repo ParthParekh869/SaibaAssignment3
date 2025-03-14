@@ -72,12 +72,13 @@ public class Move {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line= bufferedReader.readLine();
             while((line = bufferedReader.readLine())!= null){
+                //System.out.println(line);
                 String[] parameters = line.split(",");
                 String moveName = parameters[0].trim();
                 String moveType = parameters[1].trim();
                 String category = parameters[2].trim();
-                int power = Integer.parseInt(parameters[3]);
-                int accuracy = Integer.parseInt(parameters[4]);
+                int power = Integer.parseInt(parameters[3].trim());
+                int accuracy = Integer.parseInt(parameters[4].trim());
                 new Move(moveName, moveType, category, power, accuracy);
             }
         }

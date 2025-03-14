@@ -43,10 +43,12 @@ public class Pokemon {
             System.out.printf("%s used %s! It dealt %d damage!\n", name, move.getMoveName(), damage);
             if (opponent.isFainted()){
                 statistics.recordWin();
+                opponent.statistics.recordLoss();
+                System.out.printf("%s fainted!\n", opponent.getName());
             }
         }
         else {
-            System.out.printf("%s used %s abd missed.\n", name, move.getMoveName());
+            System.out.printf("%s used %s and missed.\n", name, move.getMoveName());
         }
     }
 

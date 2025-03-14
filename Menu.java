@@ -31,15 +31,22 @@ public class Menu {
         final int MINIMUM_VALUE = 1;
         int choice = -1; // invalid choice
         boolean recievedValidInput = false;
-        while (!recievedValidInput && scanner.hasNextInt()) {
-            choice = scanner.nextInt();
-            if (choice >= MINIMUM_VALUE && choice <= max) {
-                recievedValidInput = true;
-                scanner.nextLine(); // consume newline character
-            } else {
-                System.out.println("Please enter a number between " + MINIMUM_VALUE + " and " + max + ".");
-                scanner.next(); // consume invalid input
+        while (!recievedValidInput) {
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                if (choice >= MINIMUM_VALUE && choice <= max) {
+                    recievedValidInput = true;
+                    scanner.nextLine(); // consume newline character
+                } else {
+                    System.out.println("Please enter a number between " + MINIMUM_VALUE + " and " + max + ".");
+                    scanner.nextLine(); // consume invalid input
+                }
+            } 
+            else {
+                System.out.println("Please enter a valid integer.");
+                scanner.nextLine(); // consume invalid input
             }
+            
         }
         return choice;
     }
@@ -51,20 +58,22 @@ public class Menu {
             int choice = getValidIntegerChoice(6);
 
             if (choice == 1){
-                System.out.println("Starting the game...");
+                Game game = new Game();
+                game.getPlayerNames();
+                game.pickPokemons();
+                game.startBattle();;
             } 
             else if (choice == 2){
-                System.out.println("Displaying Pokémon stats...");
                 Pokemon.displayPokemonStats();
             } 
             else if (choice == 3){
-                System.out.println("Displaying player stats...");
+                Player.displayPlayerStats();
             } 
             else if (choice == 4){
-                System.out.println("Displaying type stats...");
+                Type.displayTypeStats();
             } 
             else if (choice == 5){
-                System.out.println("Displaying move stats...");
+                Move.displayMoveStats();
             } 
             else if (choice == 6){
                 System.out.println("Exiting the game. Goodbye!");
@@ -80,12 +89,13 @@ public class Menu {
         boolean recievedValidInput = false;
         String input = "";
         while (!recievedValidInput) {
-            input = scanner.next();
+            input = scanner.nextLine();
             if (!input.isEmpty()) {
                 boolean hasOnlyLetters = true;
                 for (int i = 0; i < input.length(); i++) {
                     if (!Character.isLetter(input.charAt(i))) {
                         hasOnlyLetters = false;
+                        System.out.println("Please enter a string with only letters.");
                     }
                 }
                 if (hasOnlyLetters) {

@@ -48,7 +48,7 @@ public class Player {
         System.out.println("\nPlayer Stats:");
         for (int i = 0; i < players.size(); i++) {
             Player player = players.get(i);
-            System.out.printf("%t%d. %s\n", i + 1, player);
+            System.out.printf("\t %d. %s\n", i + 1, player);
         }
         System.out.println();
     }
