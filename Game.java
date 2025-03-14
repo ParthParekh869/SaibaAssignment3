@@ -22,18 +22,25 @@ public class Game {
         this.player2 = player2;
     }
 
+    public void simulateGame() {
+        getPlayerNames();
+        pickPokemons();
+        startBattle();
+    }
+
     public void getPlayerNames(){
         System.out.print("Player 1, enter your name: ");
         String name1 = menu.getValidStringInput();
         System.out.print("Player 2, enter your name: ");
         String name2 = menu.getValidStringInput();
         player1 = Player.getPlayer(name1);
+
         player2 = Player.getPlayer(name2);
     }
 
     public void pickPokemons(){
         int noOfPicksLeft = 3;
-        ArrayList<Pokemon> availablePokemons = Pokemon.getPokemons();
+        ArrayList<Pokemon> availablePokemons = clonePokemonList();
         while (noOfPicksLeft > 0 && availablePokemons.size() >= 2){
 
             System.out.println("\n" + player1.getName() + ", choose a Pok´emon for your team:");
@@ -59,6 +66,14 @@ public class Game {
             noOfPicksLeft--;
         }
         
+    }
+
+    public ArrayList<Pokemon> clonePokemonList(){
+        ArrayList<Pokemon> newList = new ArrayList<>();
+        for (int i = 0; i < Pokemon.getPokemons().size(); i++) {
+            newList.add(Pokemon.getPokemons().get(i));
+        }
+        return newList;
     }
     private void displayAvailablePokemons(ArrayList<Pokemon> availablePokemons) {
         for (int i = 0; i < availablePokemons.size(); i++) {

@@ -59,9 +59,7 @@ public class Menu {
 
             if (choice == 1){
                 Game game = new Game();
-                game.getPlayerNames();
-                game.pickPokemons();
-                game.startBattle();;
+                game.simulateGame();
             } 
             else if (choice == 2){
                 Pokemon.displayPokemonStats();
